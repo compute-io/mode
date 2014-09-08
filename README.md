@@ -45,7 +45,7 @@ $ node ./examples/index.js
 
 ## Notes
 
-This method will return an `array`.
+This method will return a sorted `array`.
 
 
 ## Tests
