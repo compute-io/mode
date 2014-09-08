@@ -1,4 +1,4 @@
-mode
+Mode
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -19,14 +19,20 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'compute-mode' );
+var mode = require( 'compute-mode' );
 ```
 
 
 ## Examples
 
 ``` javascript
-var lib = require( 'compute-mode' );
+var data = new Array( 100 );
+
+for ( var i = 0; i < data.length; i++ ) {
+	data[ i ] = Math.round( Math.random()*10 );
+}
+
+console.log( mode( data )  );
 ```
 
 To run the example code from the top-level application directory,

@@ -25,7 +25,10 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "statistics",
+    "stats",
+    "mode"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/mode/issues"
