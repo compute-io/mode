@@ -33,6 +33,7 @@ for ( var i = 0; i < data.length; i++ ) {
 }
 
 console.log( mode( data )  );
+// Returns [...]
 ```
 
 To run the example code from the top-level application directory,
@@ -40,6 +41,11 @@ To run the example code from the top-level application directory,
 ``` bash
 $ node ./examples/index.js
 ```
+
+
+## Notes
+
+This method will return an `array`.
 
 
 ## Tests
