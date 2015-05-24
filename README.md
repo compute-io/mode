@@ -23,6 +23,17 @@ var mode = require( 'compute-mode' );
 
 #### mode( arr[, accessor])
 
+Returns the mode of the values in the input `array`.
+
+``` javascript
+var data = [ 3, 2, 5, 2, 5 ];
+
+var m = mode( data );
+// returns [2, 5]
+```
+
+This method will return a sorted `array` in increasing order, holding all modes.
+
 For non-numeric `arrays`, provide an accessor `function` for accessing `numeric` values.
 
 ``` javascript
@@ -66,11 +77,6 @@ To run the example code from the top-level application directory,
 ``` bash
 $ node ./examples/index.js
 ```
-
-
-## Notes
-
-This method will return a sorted `array`.
 
 
 ## Tests
