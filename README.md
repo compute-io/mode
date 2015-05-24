@@ -21,7 +21,7 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 var mode = require( 'compute-mode' );
 ```
 
-#### mode( arr[, accessor])
+#### mode( arr[, accessor] )
 
 Returns the mode of the values in the input `array`.
 
@@ -32,7 +32,7 @@ var m = mode( data );
 // returns [2, 5]
 ```
 
-This method will return a sorted `array` in increasing order, holding all modes.
+The function returns a sorted `array` holding all modes in increasing order.
 
 For non-numeric `arrays`, provide an accessor `function` for accessing `numeric` values.
 
