@@ -16,16 +16,41 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
 
 ``` javascript
 var mode = require( 'compute-mode' );
 ```
 
+#### mode( arr[, accessor])
+
+For non-numeric `arrays`, provide an accessor `function` for accessing `numeric` values.
+
+``` javascript
+var arr = [
+	{'x':3},
+	{'x':2},
+	{'x':5},
+	{'x':2},
+	{'x':5}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var m = mode( arr, getValue );
+// returns [2,5]
+```
+
+
+__Note__: if provided an empty `array`, the function returns `null`.
+
 
 ## Examples
 
 ``` javascript
+var mode = require( 'compute-mode' );
+
 var data = new Array( 100 );
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -52,7 +77,7 @@ This method will return a sorted `array`.
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -72,19 +97,19 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
-[MIT license](http://opensource.org/licenses/MIT). 
+[MIT license](http://opensource.org/licenses/MIT).
 
 
----
 ## Copyright
 
-Copyright &copy; 2014. Athan Reines.
+Copyright &copy; 2014-2015. The Compute.io Authors.
 
 
 [npm-image]: http://img.shields.io/npm/v/compute-mode.svg
