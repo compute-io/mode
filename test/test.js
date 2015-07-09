@@ -76,6 +76,9 @@ describe( 'compute-mode', function tests() {
 
 		data = [ 2, 4, 5, 3, 8, 4, 2 ];
 		assert.deepEqual( mode( data ), [ 2, 4 ] );
+
+		data = [ 2, 2, 4 ];
+		assert.deepEqual( mode( data ), [ 2 ] );
 	});
 
 	it( 'should compute the mode using an accessor', function test() {
@@ -107,6 +110,17 @@ describe( 'compute-mode', function tests() {
 
 		actual = mode( data, getValue );
 		expected = [ 2, 4 ];
+
+		assert.deepEqual( actual, expected );
+
+		data = [
+			{'x':2},
+			{'x':2},
+			{'x':4}
+		];
+
+		actual = mode( data, getValue );
+		expected = [ 2 ];
 
 		assert.deepEqual( actual, expected );
 
