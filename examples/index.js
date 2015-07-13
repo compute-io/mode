@@ -1,3 +1,5 @@
+'use strict';
+
 var mode = require( './../lib' );
 
 var data = new Array( 100 );
