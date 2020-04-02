@@ -1,6 +1,6 @@
 {
   "name": "compute-mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Computes the mode of an array.",
   "author": {
     "name": "Athan Reines",
