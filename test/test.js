@@ -1,3 +1,4 @@
+'use strict';
 
 // MODULES //
 
@@ -17,7 +18,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'compute-mode', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( mode ).to.be.a( 'function' );
@@ -53,6 +53,9 @@ describe( 'compute-mode', function tests() {
 
 		data = [ 2, 4, 5, 3, 8, 4, 2 ];
 		assert.deepEqual( mode( data ), [ 2, 4 ] );
+
+		data = [ 2, 2, 4 ];
+		assert.deepEqual( mode( data ), [ 2 ] );
 	});
 
 });
